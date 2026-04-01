@@ -25,9 +25,6 @@ El enfoque está en una interfaz simple, visual y fácil de navegar.
 
 ---
 
-
----
-
 ## 🎯 Objetivo
 
 Desarrollar una web funcional y clara para una hamburguesería, priorizando:
@@ -45,9 +42,9 @@ En desarrollo
 
 ## 👤 Autor
 
-Macarena Prieto
-Juan Cruz Isola
-Solana Cosenza
-Jazmin Lopez Gallo
-Iara Reale
-Eugenia Crescionini Calogero
+- Macarena Prieto
+- Juan Cruz Isola
+- Solana Cosenza
+- Jazmin Lopez Gallo
+- Iara Reale
+- Eugenia Crescionini Calogero
