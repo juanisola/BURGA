@@ -69,3 +69,12 @@ h1{
 p{
     color: #3d2113;
 }
+
+.nav1 a {
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.nav1 a:hover {
+    transform: scale(1.2);
+}
