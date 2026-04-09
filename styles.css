@@ -121,7 +121,6 @@ p{
 }
 
 .newsletter-form button {
-  background: black;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -199,6 +198,18 @@ p{
   transition: all 0.3s ease;
 }
 
+.boton1{
+  background-color: #3D2113;
+  font-family: 'logotipo';
+  font-size: 12px;
+}
+
+.botnav{
+
+    font-size: 25px;
+    color: #FAF4EB;
+    text-decoration: none;
+}
 
 .socials a:hover {
   background: white;
