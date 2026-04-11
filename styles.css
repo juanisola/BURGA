@@ -61,9 +61,8 @@ body{
     width: 100%;
     height: fit-content;
     margin-top: 40px;
-
+    display: block;
 }
-
 h1{
     text-align: center;
     font-family: 'burga';
