@@ -9,6 +9,12 @@
     src: url('fonts/font logotipo.otf') format('opentype') 
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
 body{
     background: #FAF4EB;
     margin: 0;
@@ -88,6 +94,26 @@ p{
   color: white;
   font-family: 'logotipo';
   padding: 20px 40px;
+}
+
+.local img{
+    margin: 0;
+    width: 100%;
+    height: fit-content;
+    display: block;
+    margin-top: 20px;
+}
+
+.local2{
+  font-size: 50px;
+  line-height: 44px;
+  align-items: center;
+  position: relative;
+}
+
+.bodylocal{
+  background-color: #FAF4EB;
+  padding: 40px 20px ;
 }
 
 
