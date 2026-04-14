@@ -96,6 +96,14 @@ p{
   padding: 20px 40px;
 }
 
+.localizq{
+  flex: 1;
+}
+
+.localder{
+  flex: 1;
+}
+
 .local img{
     margin: 0;
     width: 100%;
@@ -105,17 +113,96 @@ p{
 }
 
 .local2{
+  font-family: 'logotipo';
   font-size: 50px;
   line-height: 44px;
   align-items: center;
   position: relative;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+.subtextolocal {
+text-align: center;
+  color: #3D2113;
+  font-family: 'burga';
+  font-size: 20px;
+}
+
+.localprimero{
+  padding-top: 48px;
+  padding-left: 108px;
+  padding-right: 68px;
+  display: flex;
+  gap: 40px;
+}
+
+.localtexto{
+  font-family: 'burga';
+  font-size: 30px;
+  margin-bottom: 0px;
+  padding: 0;
+}
+
+.ubicacionlocal a{
+  color: #3D2113;
+  opacity: 50%;
+  text-decoration: none;
+  font-family: 'burga';
+  font-size: 20px;
+  padding: 0;
+}
+
+.localtexto h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.ubicacionlocal h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.itemslocal{
+  display: flex;
+  gap: 20px;
+  
+}
+
+.itemslocal img{
+  margin-top: 2px;
+  width: 30px;
+  height: 30px;
+}
+
+.itemslocal p{
+  color: #3D2113;
+  font-family: 'burga';
+  font-size: 20px;
+  padding: 0;
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+.ubicacionlocal{
+  margin-top: 0px;
 }
 
 .bodylocal{
   background-color: #FAF4EB;
   padding: 40px 20px ;
 }
-
+.botonpedirlocal{
+  width: 150px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: #F0D9B5;
+  border: none;
+  text-decoration: none;
+  color: #3D2113;
+  font-family: 'burga';
+  font-size: 20px;
+}
 
 .footer-newsletter {
   text-align: center;
