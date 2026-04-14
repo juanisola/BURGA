@@ -98,10 +98,15 @@ p{
 
 .localizq{
   flex: 1;
+  margin-top: 20px;
 }
 
 .localder{
   flex: 1;
+}
+
+.localder img{
+  border-radius: 50px;
 }
 
 .local img{
