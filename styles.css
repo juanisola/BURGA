@@ -193,6 +193,11 @@ text-align: center;
   margin-top: 0px;
 }
 
+.ubicacionlocal a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
 .bodylocal{
   background-color: #FAF4EB;
   padding: 40px 20px ;
