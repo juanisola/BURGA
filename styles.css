@@ -779,8 +779,6 @@ body {
       margin: 0;
     }
 
-    /* ── EQUIPO ── */
-
     .nosotros-equipo {
       background: #FAF4EB;
       padding: 100px 80px;
@@ -837,7 +835,7 @@ body {
       text-align: center;
     }
 
-/* Banner */
+
 .local img {
   width: 100%;
   display: block;
@@ -845,7 +843,7 @@ body {
   object-fit: cover;
 }
 
-/* ── Filtros ── */
+
 .menu-filtros-wrapper {
   background: #3D2113;
   padding: 0;
@@ -887,7 +885,7 @@ body {
   border-bottom: 3px solid #CF2539;
 }
 
-/* ── Intro ── */
+
 .menu-intro {
   max-width: 800px;
   margin: 52px auto 0;
@@ -908,7 +906,7 @@ body {
   font-family: 'burga';
 }
 
-/* ── Secciones ── */
+
 .menu-seccion {
   padding: 60px 80px;
   max-width: 1400px;
@@ -954,7 +952,7 @@ body {
   border-radius: 2px;
 }
 
-/* ── Grid centrado ── */
+
 .menu-grid {
   display: flex;
   flex-wrap: wrap;
@@ -962,7 +960,7 @@ body {
   gap: 28px;
 }
 
-/* ── Card ── */
+
 .menu-card {
   background: #fff;
   border-radius: 20px;
@@ -1037,7 +1035,7 @@ body {
   background: rgba(59,109,17,0.06);
 }
 
-/* ── Sección alternada ── */
+
 .menu-seccion:nth-child(even) {
   background: #F0D9B5;
   max-width: 100%;
