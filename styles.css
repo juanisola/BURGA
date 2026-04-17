@@ -630,3 +630,209 @@ body {
   backdrop-filter: blur(10px);
   box-shadow: 0 10px 50px #3D2113;
 }
+
+    .nosotros-historia {
+      background-color: #FAF4EB;
+      padding: 100px 80px;
+      display: flex;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .historia-texto {
+      flex: 1.1;
+    }
+
+    .historia-texto .seccion-tag {
+      display: inline-block;
+      background: transparent;
+      border: 2px solid #CF2539;
+      color: #CF2539;
+      font-family: 'burga';
+      font-size: 13px;
+      padding: 4px 16px;
+      border-radius: 50px;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .historia-texto h2 {
+      font-family: 'burga';
+      font-size: 52px;
+      color: #3D2113;
+      margin: 0 0 24px;
+      line-height: 1.05;
+      text-align: left;
+    }
+
+    .historia-texto h2 span {
+      color: #CF2539;
+    }
+
+    .historia-texto p {
+      font-family: 'logotipo';
+      font-size: 17px;
+      color: #5a3a28;
+      line-height: 1.85;
+      margin: 0 0 18px;
+    }
+
+    .historia-imagen {
+      flex: 0.9;
+      position: relative;
+    }
+
+    .historia-imagen-frame {
+      background: #3D2113;
+      border-radius: 30px;
+      overflow: hidden;
+      height: 460px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .historia-imagen-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 30px;
+      display: block;
+    }
+
+    .historia-imagen-frame .img-placeholder {
+      font-family: 'burga';
+      font-size: 90px;
+      color: rgba(250,244,235,0.1);
+      letter-spacing: 4px;
+    }
+
+    .nosotros-valores {
+      background: #3D2113;
+      padding: 100px 80px;
+    }
+
+    .valores-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .valores-header h2 {
+      font-family: 'burga';
+      font-size: 50px;
+      color: #FAF4EB;
+      margin: 0 0 12px;
+      text-align: center;
+    }
+
+    .valores-header p {
+      font-family: 'logotipo';
+      font-size: 18px;
+      color: rgba(250,244,235,0.5);
+      margin: 0;
+    }
+
+    .valores-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .valor-item {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 40px 32px;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .valor-item:hover {
+      transform: translateY(-6px);
+      background: rgba(255,255,255,0.09);
+    }
+
+    .valor-numero {
+      font-family: 'burga';
+      font-size: 48px;
+      color: #CF2539;
+      line-height: 1;
+      margin-bottom: 16px;
+      opacity: 0.8;
+    }
+
+    .valor-item h3 {
+      font-family: 'burga';
+      font-size: 24px;
+      color: #FAF4EB;
+      margin: 0 0 12px;
+      text-align: left;
+    }
+
+    .valor-item p {
+      font-family: 'logotipo';
+      font-size: 15px;
+      color: rgba(250,244,235,0.55);
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    /* ── EQUIPO ── */
+
+    .nosotros-equipo {
+      background: #FAF4EB;
+      padding: 100px 80px;
+    }
+
+    .equipo-header {
+      margin-bottom: 56px;
+    }
+
+    .equipo-header h2 {
+      font-family: 'burga';
+      font-size: 50px;
+      color: #CF2539;
+      margin: 0 0 10px;
+      text-align: left;
+      text-decoration: underline;
+    }
+
+    .equipo-header p {
+      font-family: 'logotipo';
+      font-size: 17px;
+      color: #7a5a48;
+      margin: 0;
+    }
+
+    .equipo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .miembro-card {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .miembro-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(207,37,57,0.15);
+    }
+
+
+    .miembro-info {
+      padding: 24px 24px 15px;
+    }
+
+    .miembro-info h3 {
+      font-family: 'burga';
+      font-size: 25px;
+      color: #3D2113;
+      margin: 0 0 4px;
+      text-align: center;
+    }
