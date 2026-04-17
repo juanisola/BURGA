@@ -836,3 +836,214 @@ body {
       margin: 0 0 4px;
       text-align: center;
     }
+
+/* Banner */
+.local img {
+  width: 100%;
+  display: block;
+  max-height: 320px;
+  object-fit: cover;
+}
+
+/* ── Filtros ── */
+.menu-filtros-wrapper {
+  background: #3D2113;
+  padding: 0;
+  position: sticky;
+  top: 70px;
+  z-index: 100;
+  border-bottom: 3px solid #CF2539;
+}
+
+.menu-filtros {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.filtro-btn {
+  background: transparent;
+  border: none;
+  color: rgba(250, 244, 235, 0.55);
+  font-family: 'burga';
+  font-size: 20px;
+  letter-spacing: 0.08em;
+  padding: 16px 32px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.2s, border-bottom 0.2s;
+}
+
+.filtro-btn:hover {
+  color: #FAF4EB;
+}
+
+.filtro-btn.filtro-activo {
+  color: #FAF4EB;
+  border-bottom: 3px solid #CF2539;
+}
+
+/* ── Intro ── */
+.menu-intro {
+  max-width: 800px;
+  margin: 52px auto 0;
+  text-align: center;
+  padding: 0 24px;
+  background: transparent;
+}
+
+.menu-intro p {
+  color: #3D2113;
+  font-family: 'logotipo';
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+.menu-intro strong {
+  color: #CF2539;
+  font-family: 'burga';
+}
+
+/* ── Secciones ── */
+.menu-seccion {
+  padding: 60px 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.menu-seccion-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.menu-seccion-header h2 {
+  font-family: 'burga';
+  font-size: 52px;
+  font-weight: 900;
+  color: #3D2113;
+  letter-spacing: 0.08em;
+  margin: 10px 0 16px;
+  text-transform: uppercase;
+}
+
+.menu-linea-tag {
+  display: inline-block;
+  font-family: 'burga';
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  padding: 5px 18px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.smash-tag   { background: #CF2539; color: #FAF4EB; }
+.clasica-tag { background: #3D2113; color: #FAF4EB; }
+.urbana-tag  { background: #FAF4EB; color: #3D2113; border: 2px solid #3D2113; }
+.chicken-tag { background: #b85c1a; color: #FAF4EB; }
+
+.linea-separador {
+  width: 48px;
+  height: 3px;
+  background: #CF2539;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* ── Grid centrado ── */
+.menu-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+}
+
+/* ── Card ── */
+.menu-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(61,33,19,0.08);
+  width: 270px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 50px rgba(207, 37, 57, 0.2);
+}
+
+.menu-card-img {
+  position: relative;
+  overflow: hidden;
+  background: #F0D9B5;
+  aspect-ratio: 1 / 1;
+}
+
+.menu-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.menu-card:hover .menu-card-img img {
+  transform: scale(1.05);
+}
+
+.menu-card-info {
+  padding: 20px 18px 22px;
+}
+
+.menu-card-info h3 {
+  font-family: 'burga';
+  font-size: 22px;
+  color: #3D2113;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 8px;
+}
+
+.menu-card-info p {
+  font-family: 'logotipo';
+  font-size: 14px;
+  color: #5a3a28;
+  line-height: 1.6;
+  margin: 0 0 12px;
+}
+
+.menu-tag {
+  display: inline-block;
+  font-family: 'burga';
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: #CF2539;
+  text-transform: uppercase;
+  border: 1px solid rgba(207,37,57,0.3);
+  padding: 3px 10px;
+  border-radius: 50px;
+  background: rgba(207,37,57,0.06);
+}
+
+.veggie-tag-item {
+  color: #3b6d11;
+  border-color: rgba(59,109,17,0.3);
+  background: rgba(59,109,17,0.06);
+}
+
+/* ── Sección alternada ── */
+.menu-seccion:nth-child(even) {
+  background: #F0D9B5;
+  max-width: 100%;
+  padding: 60px 80px;
+}
+
+.menu-seccion:nth-child(even) .menu-card {
+  background: #FAF4EB;
+}
