@@ -119,7 +119,7 @@ p{
 
 .local2{
   font-family: 'logotipo';
-  font-size: 50px;
+  font-size: 60px;
   line-height: 44px;
   align-items: center;
   position: relative;
@@ -128,10 +128,10 @@ p{
 }
 
 .subtextolocal {
-text-align: center;
+  text-align: center;
   color: #3D2113;
   font-family: 'burga';
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .localprimero{
@@ -140,6 +140,34 @@ text-align: center;
   padding-right: 68px;
   display: flex;
   gap: 40px;
+}
+.localprimero:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.ubicacionlocal a {
+  transition: all 0.3s ease;
+}
+
+.localprimero {
+  display: flex;
+  gap: 40px;
+  padding: 30px 40px;
+  margin: 40px 80px;
+
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.localprimero:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 50px #CF2539;
 }
 
 .localtexto{
