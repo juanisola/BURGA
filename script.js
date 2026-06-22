@@ -60,6 +60,9 @@ function aplicardescuento(){
 
 domicilio.addEventListener("change", function() {
     if(domicilio.checked){
+        // Muestra los inputs de dirección usando jQuery
+        $('#campos-direccion').fadeIn(200);
+
         if (aplicado === true){
             pagar.textContent=parseInt(pagar.textContent)/0.9;
             pagar.textContent = parseInt(pagar.textContent) + 1200;
@@ -71,6 +74,9 @@ domicilio.addEventListener("change", function() {
         }
     }
     else {
+        // Oculta los inputs de dirección usando jQuery
+        $('#campos-direccion').fadeOut(200);
+
         if (aplicado === true){
             pagar.textContent=parseInt(pagar.textContent)/0.9;
             pagar.textContent = parseInt(pagar.textContent) - 1200;
@@ -91,3 +97,30 @@ $(document).ready(function() {
   });
 
 });
+
+
+function finalizarcompra() {
+    if (parseInt(pagar.textContent) === 0) {
+        alert("¡Tu carrito está vacío! Agregá alguna burger primero.");
+        return; 
+    }
+
+    let boton = $('.btn-finalizar');
+    boton.text("PROCESANDO PEDIDO...");
+    boton.css('background-color', '#a0a0a0');
+    setTimeout(function() {
+        
+        alert("¡Muchas gracias por tu compra en BURGA! Tu pedido ya se está cocinando. Total: $" + pagar.textContent);
+        
+        contador.textContent = 0;
+        pagar.textContent = 0;
+        $('#campos-direccion').fadeOut();
+        $(domicilio).prop('checked', false); 
+        aplicado = false;
+        // 5. Devolvemos el botón a su estado original
+        boton.text("FINALIZAR COMPRA");
+        boton.css('background-color', '#CF2539');
+
+    }, 2000);
+}
+
