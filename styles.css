@@ -1019,7 +1019,7 @@ body {
 .menu-tag {
   display: inline-block;
   font-family: 'burga';
-  font-size: 13px;
+  font-size: 16px;
   letter-spacing: 0.1em;
   color: #CF2539;
   text-transform: uppercase;
@@ -1044,4 +1044,122 @@ body {
 
 .menu-seccion:nth-child(even) .menu-card {
   background: #FAF4EB;
+}
+
+
+.carrito{
+  padding: 60px 80px;
+  font-family: 'burga';
+  font-size: 20px;
+  background: #CF2539;
+}
+
+.carritosection{
+  background: #FAF4EB;
+  padding: 40px 30px;
+  border-radius: 30px;
+  box-shadow: 0 40px 40px rgba(0,0,0,0.1);
+}
+
+.carritogen{
+  display: flex;
+  width: 100%;
+
+  
+}
+
+.carritoizq{
+  flex: 1;
+  font-size: 25px;
+}
+
+.carritoder h2{
+  font-size: 30px;
+  color: #3D2113;
+  margin: 0px;
+  display: inline-block;
+}
+
+.carritoder{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  margin:0;
+}
+
+.titulocarrito{
+  font-size: 50px;
+  color: #3D2113;
+  margin: 0 0 28px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid #cf2539;
+  display: inline-block;
+}
+
+.btn-carrito {
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: #3D2113;
+  font-family: 'logotipo';
+  font-size: 12px;
+  border-radius: 50px;
+  width: 20%;
+}
+
+.input-descuento {
+  border-radius: 50px;
+  padding: 5px;
+  width: 150px;
+  border: 2px solid #5b9e3a;
+  font-size: 15px;
+  background: #fff;
+}
+
+.btn-aplicar {
+  color: white;
+  border: none;
+  padding: 5px 20px;
+  background-color: #5b9e3a;  
+  font-family: 'logotipo';
+  font-size: 15px;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
+.btn-finalizar {
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  cursor: pointer;
+  background-color: #CF2539;
+  font-family: 'logotipo';
+  font-size: 16px;
+  border-radius: 50px;
+  margin: 40px auto 0;
+  display: block;
+}
+
+
+.agregarsmash{
+  margin-right: 0px;
+  align-items: right;
+  margin-left: 50px;
+  font-family: 'burga';
+  font-size: 20px;
+  color: #5b9e3a;
+  border: 1px solid #5b9e3a;
+  padding: 3px 10px;
+  border-radius: 50px;
+  background: #edf4e7
+}
+
+
+.crispycard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
 }
