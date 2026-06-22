@@ -82,3 +82,12 @@ domicilio.addEventListener("change", function() {
         }
     }
 });
+
+$(document).ready(function() {
+  $('.secdesplegable .fa-arrow-down').click(function() {
+    $('.carritosection').fadeToggle(300); // 300 son los milisegundos que dura la animación
+    $(this).toggleClass('rotate-arrow');
+    
+  });
+
+});

@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="img/logo.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <title>BURGA. — Menu</title>
 </head>
 <body>
@@ -89,21 +90,6 @@
         <div class="linea-separador"></div>
       </div>
       <div class="menu-grid">
-
-        <div class="menu-card" data-category="clasica">
-          <div class="menu-card-img">
-            <img src="img/Dean Bacon.png" alt="Dean Bacon">
-          </div>
-          <div class="menu-card-info">
-            <h3>Dean Bacon</h3>
-            <p>Hamburguesa de carne 120g, cheddar, panceta crocante, barbacoa, cebolla morada y salsa Burga.</p>
-            <div class="crispycard">
-              <span class="menu-tag">10000 ARS</span>
-              <button class="agregarsmash" onclick="agregarclasica()">AGREGAR</button>
-            </div>
-          </div>
-        </div>
-
         <div class="menu-card" data-category="clasica">
           <div class="menu-card-img">
             <img src="img/Super Bacon Burger.png" alt="Super Bacon Burger">
@@ -257,12 +243,18 @@
     </section>
 
     <section class="carrito">
+      <div class="secdesplegable">
+        <h1 class="titulodesplegable">
+          CARRITO DE COMPRAS
+        </h1>
+        <i class="fa-solid fa-arrow-down"></i>
+      </div>
       <div class="carritosection">
         <div class="carrito-header">
           <h2 class="titulocarrito">TU CARRITO</h2>
         </div>
         <div class="carritogen">
-          <div class="carritoizq"
+          <div class="carritoizq">
             <h2>
               Cantidad de productos seleccionados:
             </h2>
@@ -273,9 +265,7 @@
             <button class="btn-aplicar" onclick="aplicardescuento()">APLICAR</button>
           </div>
           <div class="carritoder">
-            <button class="btn-carrito">VER CARRITO</button>
-            <br>
-            <h2>
+            <h2 class="">
               Cantidad a pagar:
             </h2>
             <p style="font-size: 30px; color: black; margin-top: 3px;" id="totalpagar">0</p>
@@ -288,7 +278,8 @@
         <button class="btn-finalizar">FINALIZAR COMPRA</button>
       </div>
     </section>
-
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="script.js"></script>
 
   </div><!-- /#secciones -->

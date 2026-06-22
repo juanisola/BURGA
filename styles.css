@@ -643,6 +643,8 @@ body {
       flex: 1.1;
     }
 
+
+
     .historia-texto .seccion-tag {
       display: inline-block;
       background: transparent;
@@ -939,6 +941,8 @@ body {
   margin-bottom: 8px;
 }
 
+
+
 .smash-tag   { background: #CF2539; color: #FAF4EB; }
 .clasica-tag { background: #3D2113; color: #FAF4EB; }
 .urbana-tag  { background: #FAF4EB; color: #3D2113; border: 2px solid #3D2113; }
@@ -1048,7 +1052,7 @@ body {
 
 
 .carrito{
-  padding: 60px 80px;
+  padding: 20px 60px 1px;
   font-family: 'burga';
   font-size: 20px;
   background: #CF2539;
@@ -1059,6 +1063,8 @@ body {
   padding: 40px 30px;
   border-radius: 30px;
   box-shadow: 0 40px 40px rgba(0,0,0,0.1);
+  margin-bottom: 50px;
+  display: none;
 }
 
 .carritogen{
@@ -1078,6 +1084,7 @@ body {
   color: #3D2113;
   margin: 0px;
   display: inline-block;
+  margin-top: 50px;
 }
 
 .carritoder{
@@ -1162,4 +1169,36 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: auto;
+}
+
+.titulodesplegable{
+  margin-top: 15px;
+  color: #FAF4EB;
+  font-size: 55px;
+}
+
+.secdesplegable{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  margin-left: 0px;
+}
+
+
+i{
+  color: #FAF4EB;
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+
+.secdesplegable .fa-arrow-down {
+  cursor: pointer; /* Hace que aparezca la manito del mouse */
+  transition: transform 0.3s ease;
+}
+
+
+.rotate-arrow {
+  transform: rotate(180deg);
 }
