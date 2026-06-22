@@ -57,48 +57,6 @@ function aplicardescuento(){
     }
 }
 
-
-domicilio.addEventListener("change", function() {
-    if(domicilio.checked){
-        // Muestra los inputs de dirección usando jQuery
-        $('#campos-direccion').fadeIn(200);
-
-        if (aplicado === true){
-            pagar.textContent=parseInt(pagar.textContent)/0.9;
-            pagar.textContent = parseInt(pagar.textContent) + 1200;
-            aplicado = false;
-            alert("El descuento ya no esta aplicado, porfavor ingresarlo devuelta");
-        }
-        else{
-            pagar.textContent = parseInt(pagar.textContent) + 1200;
-        }
-    }
-    else {
-        // Oculta los inputs de dirección usando jQuery
-        $('#campos-direccion').fadeOut(200);
-
-        if (aplicado === true){
-            pagar.textContent=parseInt(pagar.textContent)/0.9;
-            pagar.textContent = parseInt(pagar.textContent) - 1200;
-            aplicado = false;
-            alert("El descuento ya no esta aplicado, porfavor ingresarlo devuelta");
-        }
-        else{
-        pagar.textContent = parseInt(pagar.textContent) - 1200;
-        }
-    }
-});
-
-$(document).ready(function() {
-  $('.secdesplegable .fa-arrow-down').click(function() {
-    $('.carritosection').fadeToggle(300); // 300 son los milisegundos que dura la animación
-    $(this).toggleClass('rotate-arrow');
-    
-  });
-
-});
-
-
 function finalizarcompra() {
     if (parseInt(pagar.textContent) === 0) {
         alert("¡Tu carrito está vacío! Agregá alguna burger primero.");
@@ -155,3 +113,45 @@ function validarformulario() {
 
     }
 }
+
+domicilio.addEventListener("change", function() {
+    if(domicilio.checked){
+        // Muestra los inputs de dirección usando jQuery
+        $('#campos-direccion').fadeIn(200);
+
+        if (aplicado === true){
+            pagar.textContent=parseInt(pagar.textContent)/0.9;
+            pagar.textContent = parseInt(pagar.textContent) + 1200;
+            aplicado = false;
+            alert("El descuento ya no esta aplicado, porfavor ingresarlo devuelta");
+        }
+        else{
+            pagar.textContent = parseInt(pagar.textContent) + 1200;
+        }
+    }
+    else {
+        // Oculta los inputs de dirección usando jQuery
+        $('#campos-direccion').fadeOut(200);
+
+        if (aplicado === true){
+            pagar.textContent=parseInt(pagar.textContent)/0.9;
+            pagar.textContent = parseInt(pagar.textContent) - 1200;
+            aplicado = false;
+            alert("El descuento ya no esta aplicado, porfavor ingresarlo devuelta");
+        }
+        else{
+        pagar.textContent = parseInt(pagar.textContent) - 1200;
+        }
+    }
+});
+
+$(document).ready(function() {
+  $('.secdesplegable .fa-arrow-down').click(function() {
+    $('.carritosection').fadeToggle(300); // 300 son los milisegundos que dura la animación
+    $(this).toggleClass('rotate-arrow');
+    
+  });
+
+});
+
+
