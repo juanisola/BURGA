@@ -124,3 +124,34 @@ function finalizarcompra() {
     }, 2000);
 }
 
+
+function validarformulario() {
+    let nombre = document.getElementById("nombre").value;
+    let apellido = document.getElementById("apellido").value;
+    let email = document.getElementById("email").value;
+    let telefono = document.getElementById("numero").value;
+    let mensaje = document.getElementById("mensaje").value;
+    let motivo = document.getElementById("motivo").value;
+    let sucursal = document.getElementById("sucursal").value;
+
+// Validamos todo: incluimos motivo y sucursal
+    if (nombre === "" || apellido === "" || email === "" || telefono === "" || mensaje === "" || motivo === "" || sucursal === "") {
+        alert("Error. Por favor, completá todos los campos, incluido el motivo y la sucursal.");
+    } 
+    else if (!email.includes("@")) {
+        alert("Por favor, ingresá un mail válido que contenga un @.");
+    } 
+    else {
+        alert("Formulario enviado correctamente!");
+        
+        // Limpiamos todo
+        document.getElementById("nombre").value = "";
+        document.getElementById("apellido").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("numero").value = "";
+        document.getElementById("mensaje").value = "";
+        document.getElementById("motivo").selectedIndex = 0;
+        document.getElementById("sucursal").selectedIndex = 0;
+
+    }
+}

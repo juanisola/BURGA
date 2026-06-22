@@ -38,26 +38,26 @@
     <img src="img/Papitas.png" alt="Papitas Contacto">
   </div>
   
-  <div class="form1">
-    <form>
-      <select name="motivo">
-        <option disabled selected hidden>Motivo de contacto:</option>
-        <option>Ofrecer servicio como proveedor.</option>
-        <option>Tuve un problema</option>
-        <option>Otro motivo</option>
-      </select>
-    </form>
-  </div>
+<div class="form1">
+  <form>
+    <select name="motivo" id="motivo">
+      <option disabled selected hidden value="">Motivo de contacto:</option>
+      <option value="proveedor">Ofrecer servicio como proveedor.</option>
+      <option value="problema">Tuve un problema</option>
+      <option value="otro">Otro motivo</option>
+    </select>
+  </form>
+</div>
 
-  <div class="form1">
-    <form>
-      <select name="sucursal">
-        <option disabled selected hidden>Sucursal:</option>
-        <option>Puerto madero.</option>
-        <option>Belgrano</option>
-      </select>
-    </form>
-  </div>
+<div class="form1">
+  <form>
+    <select name="sucursal" id="sucursal">
+      <option disabled selected hidden value="">Sucursal:</option>
+      <option value="madero">Puerto madero.</option>
+      <option value="belgrano">Belgrano</option>
+    </select>
+  </form>
+</div>
 
   </div>
   
@@ -65,35 +65,37 @@
   <div class="der">
   <div class="form1">
     <form>
-      <input type="text" placeholder="Nombre:">
+      <input type="text" id='nombre'placeholder="Nombre:">
     </form>
   </div>
   <div class="form1">
     <form>
-      <input type="text" placeholder="Apellido:">
+      <input type="text" id="apellido" placeholder="Apellido:">
     </form>
   </div>
   <div class="form1">
     <form>
-      <input type="email" placeholder="Email:">
+      <input type="email" id="email" placeholder="Email:">
     </form>
   </div>
   <div class="form1">
     <form>
-      <input type="text" placeholder="Teléfono:">
+      <input type="number" id="numero" placeholder="Teléfono:">
     </form>
   </div>
   <div class="form2">
     <form>
-      <input type="text"placeholder="¡Déjanos tu mensaje!">
+      <input type="text" id="mensaje" placeholder="¡Déjanos tu mensaje!">
     </form>
   </div>
 
   </div>
 </div>
+<script src="script.js"></script>
+
 
   <div class="enviarinfo">
-    <button>ENVIAR INFORMACION</button>
+    <button onclick='validarformulario()'>ENVIAR INFORMACION</button>
   </div>
 
   </div>
@@ -105,8 +107,24 @@
     <p>Suscribite a nuestro newsletter y recibí las últimas novedades, promociones y descuentos.</p>
 
     <div class="newsletter-form">
-      <input type="email" placeholder="EJEMPLO@EMAIL.COM">
-      <button>SUBSCRIBIRME</button>
+      <input type="email" id="contacto" placeholder="EJEMPLO@EMAIL.COM">
+      <button onclick="suscribirse()">SUBSCRIBIRME</button>
+      <script>
+        function suscribirse(){
+          let inputContacto = document.getElementById("contacto");
+          let email = inputContacto.value;
+          if (email === "") {
+            alert("No has ingresado ningún mail.");
+          } 
+          else if (!email.includes("@")) {
+            alert("Por favor, ingresá un mail válido que contenga un @.");
+          } 
+          else {
+            alert("¡Te has suscripto exitosamente!");
+            inputContacto.value = ''; // Limpiamos el input
+          }
+        }
+      </script>
     </div>
   </div>
 

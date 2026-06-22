@@ -1174,7 +1174,7 @@ body {
 .titulodesplegable{
   margin-top: 15px;
   color: #FAF4EB;
-  font-size: 55px;
+  font-size: 45px;
 }
 
 .secdesplegable{
@@ -1186,19 +1186,19 @@ body {
 }
 
 
-i{
+
+
+.secdesplegable .fa-arrow-down {
+  cursor: pointer;
+  transition: transform 0.3s ease;
   color: #FAF4EB;
   font-size: 45px;
   margin-bottom: 10px;
 }
 
 
-.secdesplegable .fa-arrow-down {
-  cursor: pointer; /* Hace que aparezca la manito del mouse */
-  transition: transform 0.3s ease;
-}
-
-
 .rotate-arrow {
   transform: rotate(180deg);
 }
+
+

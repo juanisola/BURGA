@@ -110,8 +110,24 @@
     <p>Suscribite a nuestro newsletter y recibí las últimas novedades, promociones y descuentos.</p>
 
     <div class="newsletter-form">
-      <input type="email" placeholder="EJEMPLO@EMAIL.COM">
-      <button>SUBSCRIBIRME</button>
+      <input type="email" id="contacto" placeholder="EJEMPLO@EMAIL.COM">
+      <button onclick="suscribirse()">SUBSCRIBIRME</button>
+      <script>
+        function suscribirse(){
+          let inputContacto = document.getElementById("contacto");
+          let email = inputContacto.value;
+          if (email === "") {
+            alert("No has ingresado ningún mail.");
+          } 
+          else if (!email.includes("@")) {
+            alert("Por favor, ingresá un mail válido que contenga un @.");
+          } 
+          else {
+            alert("¡Te has suscripto exitosamente!");
+            inputContacto.value = ''; // Limpiamos el input
+          }
+        }
+      </script>
     </div>
   </div>
 

@@ -34,6 +34,48 @@
     <img src="img/menu.png" alt="Banner Menu">
   </div>
 
+     <section class="carrito">
+      <div class="secdesplegable">
+        <h1 class="titulodesplegable">
+          CARRITO DE COMPRAS
+        </h1>
+        <i class="fa-solid fa-arrow-down"></i>
+      </div>
+      <div class="carritosection">
+        <div class="carrito-header">
+          <h2 class="titulocarrito">TU CARRITO</h2>
+        </div>
+        <div class="carritogen">
+          <div class="carritoizq">
+            <h2>
+              Cantidad de productos seleccionados:
+            </h2>
+            <p style="font-size: 30px; color: black; margin-top: 3px;" id="contador">0</p>
+            <label>Descuento: </label>
+            <input type="text" placeholder="Código de descuento" class="input-descuento" id="descuento">
+            <br>
+            <button class="btn-aplicar" onclick="aplicardescuento()">APLICAR</button>
+          </div>
+          <div class="carritoder">
+            <h2 class="">
+              Cantidad a pagar:
+            </h2>
+            <p style="font-size: 30px; color: black; margin-top: 3px;" id="totalpagar">0</p>
+            <div class="envio">
+              <label>¿Querés envío a domicilio? (+1200$)</label>
+              <input type="checkbox" id="envio" name="envio">
+            </div>
+            <div id="campos-direccion" style="display: none; margin-top: 15px;">
+              <label style="display: block; margin-bottom: 5px;">Dirección de entrega:</label>
+              <input type="text" placeholder="Calle y número" class="input-descuento" style="width: 100%; max-width: 300px; margin-bottom: 10px;">
+              <input type="text" placeholder="Depto / Piso / Timbre (Opcional)" class="input-descuento" style="width: 100%; max-width: 300px;">
+            </div>
+          </div>
+        </div>
+        <button class="btn-finalizar" onclick="finalizarcompra()">FINALIZAR COMPRA</button>
+      </div>
+    </section>
+
 
   <section class="menu-intro">
     <p>Contamos con tres líneas de hamburguesas: la <strong>Línea Urbana</strong>, más accesible pero con la misma calidad de siempre; nuestra <strong>Línea Clásica</strong> con los medallones de siempre; y la <strong>Línea SMASH</strong> con nuestras burgers premium. Todas hechas con carne de novillo sin aditivos ni conservantes, en pan artesanal.</p>
@@ -242,47 +284,6 @@
 
     </section>
 
-    <section class="carrito">
-      <div class="secdesplegable">
-        <h1 class="titulodesplegable">
-          CARRITO DE COMPRAS
-        </h1>
-        <i class="fa-solid fa-arrow-down"></i>
-      </div>
-      <div class="carritosection">
-        <div class="carrito-header">
-          <h2 class="titulocarrito">TU CARRITO</h2>
-        </div>
-        <div class="carritogen">
-          <div class="carritoizq">
-            <h2>
-              Cantidad de productos seleccionados:
-            </h2>
-            <p style="font-size: 30px; color: black; margin-top: 3px;" id="contador">0</p>
-            <label>Descuento: </label>
-            <input type="text" placeholder="Código de descuento" class="input-descuento" id="descuento">
-            <br>
-            <button class="btn-aplicar" onclick="aplicardescuento()">APLICAR</button>
-          </div>
-          <div class="carritoder">
-            <h2 class="">
-              Cantidad a pagar:
-            </h2>
-            <p style="font-size: 30px; color: black; margin-top: 3px;" id="totalpagar">0</p>
-            <div class="envio">
-              <label>¿Querés envío a domicilio? (+1200$)</label>
-              <input type="checkbox" id="envio" name="envio">
-            </div>
-            <div id="campos-direccion" style="display: none; margin-top: 15px;">
-              <label style="display: block; margin-bottom: 5px;">Dirección de entrega:</label>
-              <input type="text" placeholder="Calle y número" class="input-descuento" style="width: 100%; max-width: 300px; margin-bottom: 10px;">
-              <input type="text" placeholder="Depto / Piso / Timbre (Opcional)" class="input-descuento" style="width: 100%; max-width: 300px;">
-            </div>
-          </div>
-        </div>
-        <button class="btn-finalizar" onclick="finalizarcompra()">FINALIZAR COMPRA</button>
-      </div>
-    </section>
     
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="script.js"></script>
@@ -296,8 +297,24 @@
     <p>Suscribite a nuestro newsletter y recibí las últimas novedades, promociones y descuentos.</p>
 
     <div class="newsletter-form">
-      <input type="email" placeholder="EJEMPLO@EMAIL.COM">
-      <button>SUBSCRIBIRME</button>
+      <input type="email" id="contacto" placeholder="EJEMPLO@EMAIL.COM">
+      <button onclick="suscribirse()">SUBSCRIBIRME</button>
+      <script>
+        function suscribirse(){
+          let inputContacto = document.getElementById("contacto");
+          let email = inputContacto.value;
+          if (email === "") {
+            alert("No has ingresado ningún mail.");
+          } 
+          else if (!email.includes("@")) {
+            alert("Por favor, ingresá un mail válido que contenga un @.");
+          } 
+          else {
+            alert("¡Te has suscripto exitosamente!");
+            inputContacto.value = ''; // Limpiamos el input
+          }
+        }
+      </script>
     </div>
   </div>
 
