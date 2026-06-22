@@ -64,7 +64,7 @@ function aplicardescuento(){
 
 function finalizarcompra() {
     if (parseInt(pagar.textContent) === 0) {
-        alert("¡Tu carrito está vacío! Agregá alguna burger primero.");
+        alert("¡Tu carrito está vacío! Agregá alguna burga primero.");
         return; 
     }
 
