@@ -48,6 +48,11 @@ function agregarurbano(){
 
 
 function aplicardescuento(){
+    if(descuento.value !='BURGA10' && aplicado == false){
+        alert("Porfavor ingrese un descuento valido.")
+        document.getElementById("descuento").value = "";
+    }
+
     if(descuento.value === "BURGA10" && aplicado === false){
         pagar.textContent = parseInt(pagar.textContent) * 0.9;
         aplicado = true;
@@ -92,7 +97,6 @@ function validarformulario() {
     let motivo = document.getElementById("motivo").value;
     let sucursal = document.getElementById("sucursal").value;
 
-// Validamos todo: incluimos motivo y sucursal
     if (nombre === "" || apellido === "" || email === "" || telefono === "" || mensaje === "" || motivo === "" || sucursal === "") {
         alert("Error. Por favor, completá todos los campos, incluido el motivo y la sucursal.");
     } 
