@@ -89,6 +89,7 @@ function finalizarcompra() {
 
 
 function validarformulario() {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     let nombre = document.getElementById("nombre").value;
     let apellido = document.getElementById("apellido").value;
     let email = document.getElementById("email").value;
@@ -100,9 +101,10 @@ function validarformulario() {
     if (nombre === "" || apellido === "" || email === "" || telefono === "" || mensaje === "" || motivo === "" || sucursal === "") {
         alert("Error. Por favor, completá todos los campos, incluido el motivo y la sucursal.");
     } 
-    else if (!email.includes("@")) {
-        alert("Por favor, ingresá un mail válido que contenga un @.");
-    } 
+    else if (!emailRegex.test(email)) {
+        alert('El correo electrónico no es válido.');
+        return;
+      }
     else {
         alert("Formulario enviado correctamente!");
         
