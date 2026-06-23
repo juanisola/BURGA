@@ -37,7 +37,7 @@
   <div class="papitas"> 
     <img src="img/Papitas.png" alt="Papitas Contacto">
   </div>
-  
+
 <div class="form1">
   <form>
     <select name="motivo" id="motivo">
@@ -109,22 +109,6 @@
     <div class="newsletter-form">
       <input type="email" id="contacto" placeholder="EJEMPLO@EMAIL.COM">
       <button onclick="suscribirse()">SUBSCRIBIRME</button>
-      <script>
-        function suscribirse(){
-          let inputContacto = document.getElementById("contacto");
-          let email = inputContacto.value;
-          if (email === "") {
-            alert("No has ingresado ningún mail.");
-          } 
-          else if (!email.includes("@")) {
-            alert("Por favor, ingresá un mail válido que contenga un @.");
-          } 
-          else {
-            alert("¡Te has suscripto exitosamente!");
-            inputContacto.value = ''; // Limpiamos el input
-          }
-        }
-      </script>
     </div>
   </div>
 

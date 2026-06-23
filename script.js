@@ -86,7 +86,22 @@ function finalizarcompra() {
 
     }, 2000);
 }
-
+    function suscribirse(){
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        let inputContacto = document.getElementById("contacto");
+        let email = inputContacto.value;
+        if (email === "") {
+            alert("No has ingresado ningún mail.");
+        } 
+        else if (!emailRegex.test(email)) {
+            alert('El correo electrónico no es válido.');
+            return;
+        }
+        else {
+            alert("¡Te has suscripto exitosamente!");
+            inputContacto.value = ''; // Limpiamos el input
+        }
+    }
 
 function validarformulario() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
