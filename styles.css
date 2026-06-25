@@ -1202,6 +1202,7 @@ body {
 
 
 .agregarsmash{
+  cursor: pointer;
   margin-right: 0px;
   align-items: right;
   margin-left: 50px;
