@@ -282,6 +282,7 @@ p{
   padding: 40px 20px ;
 }
 .botonpedirlocal{
+  cursor: pointer;
   width: 150px;
   height: 40px;
   border-radius: 50px;
@@ -1177,6 +1178,7 @@ body {
 }
 
 .btn-aplicar {
+  cursor: pointer;
   color: white;
   border: none;
   padding: 5px 20px;
