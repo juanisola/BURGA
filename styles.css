@@ -1306,8 +1306,8 @@ body {
   background-color: #5b9e3a;
   display: flex;
   align-items: center;
-  padding: 0.5px 10px;
-  border-radius: 5px;
+  padding: 0.5px 20px;
+  border-radius: 10px;
   gap: 10px;
   color: #FAF4EB;
   position: fixed;
