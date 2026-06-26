@@ -119,7 +119,7 @@ function finalizarcompra() {
         }
         else {
             alert("¡Te has suscripto exitosamente!");
-            inputContacto.value = ''; // Limpiamos el input
+            inputContacto.reset();
         }
     }
 
@@ -140,10 +140,19 @@ function validarformulario() {
         alert('El correo electrónico no es válido.');
         return;
       }
+    else if (telefono.length< 10){
+        alert("El telefono debe ser valido, porfavor ingresar 10 números.")
+        return;
+    }
     else {
-        alert("Formulario enviado correctamente!");
+
+    let boton = $('#btn-enviar');
+    boton.text("ENVIANDO...");
+    boton.css('background-color', '#a0a0a0');
+    setTimeout(function() {
         
-        // Limpiamos todo
+        alert("Formulario enviado correctamente!");
+
         document.getElementById("nombre").value = "";
         document.getElementById("apellido").value = "";
         document.getElementById("email").value = "";
@@ -152,6 +161,11 @@ function validarformulario() {
         document.getElementById("motivo").selectedIndex = 0;
         document.getElementById("sucursal").selectedIndex = 0;
 
+        // 5. Devolvemos el botón a su estado original
+        boton.text("ENVIAR INFORMACION");
+        boton.css('background-color', '#3D2113');
+
+    }, 2000);
     }
 }
 

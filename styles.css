@@ -632,6 +632,10 @@ body {
   color: #8a8a8a
 }
 
+.contacto-full{
+  background-color: #FAF4EB;
+}
+
 .bodycontacto{
   display: flex;
   justify-content: center;
@@ -676,11 +680,12 @@ body {
 
 .cajoncontacto{
   padding: 20px 0px;
-  margin: 40px 80px;
+  margin: 100px 200px;
   border-radius: 30px;
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
   box-shadow: 0 10px 50px #3D2113;
+  width: 65;
 }
 
     .nosotros-historia {

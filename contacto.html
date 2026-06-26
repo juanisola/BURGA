@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <title>BURGA.— Contacto</title>
 </head>
-<body>
+<body class="contacto-full">
   <header>
     <div class="backgroundback"></div>
     <div class="navhead">
@@ -28,7 +28,7 @@
   <div class="local">
   <img src="img/contacto.png" alt="Banner Locales">
   </div>
-
+<div class="body-contacto">
 
 <div class="cajoncontacto">
 <div class="bodycontacto">
@@ -91,13 +91,15 @@
 
   </div>
 </div>
-<script src="script.js"></script>
+
 
 
   <div class="enviarinfo">
-    <button onclick='validarformulario()'>ENVIAR INFORMACION</button>
+    <button onclick='validarformulario()' id="btn-enviar">ENVIAR INFORMACION</button>
   </div>
 
+</div>
+  
   </div>
 
     <footer class="footer">
@@ -146,5 +148,7 @@
   </div>
 
 </footer>
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </body>
 </html>
