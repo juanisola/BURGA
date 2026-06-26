@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <title>BURGA. — Registrate</title>
+</head>
+<body>
+  <header>
+    <div class="backgroundback"></div>
+    <div class="navhead">
+      <nav class="nav1">
+        <a href="index.html" class="home">INICIO</a>
+        <a href="menu.html" class="home">MENU</a>
+        <a href="novedades.html" class="home">NOVEDADES</a>
+        <a href="index.html" class="logoarriba">
+          <img src="img/logo.png" alt="Logo Burga">
+        </a>
+        <a href="locales.html" class="home">LOCALES</a>
+        <a href="nosotros.html" class="home">NOSOTROS</a>
+        <a href="contacto.html" class="home">CONTACTO</a>
+        <a href="login.html" class="login-btn">
+          <i class="bx bx-user-circle"></i>
+          <span>INGRESAR</span>
+        </a> 
+      </nav>
+    </div>
+  </header>
+
+<div class="formulario">
+  <img src="img/registro1.png" alt="Banner Registro">
+</div>
+
+<div class="form-hero">
+    <span class="hero-badge">Exclusivo para nuevos clientes</span>
+    <h1>CREÁ TU <span>CUENTA</span></h1>
+    <p>Registrate y obtené un código de descuento del 10% en tu primera compra, más promos futuras imperdibles.</p>
+</div>
+
+<div class="bodyformulario">
+
+    <div id="formContenedor" class="form-contenedor">
+      <div class="cajonformulario">
+
+        <span class="sec-titulo"><i class="fa-solid fa-user"></i>&nbsp; Datos personales</span>
+
+        <div class="fila-dos">
+          <div class="campo-form">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Juan" autocomplete="given-name">
+            <p class="error-msg" id="err-nombre">Campo requerido</p>
+          </div>
+          <div class="campo-form">
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" placeholder="García" autocomplete="family-name">
+            <p class="error-msg" id="err-apellido">Campo requerido</p>
+          </div>
+        </div>
+
+        <div class="campo-form">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="juan@email.com" autocomplete="email">
+          <p class="error-msg" id="err-email">Ingresá un email válido</p>
+        </div>
+
+        <div class="campo-form">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="+54 11 1234-5678" autocomplete="tel">
+        </div>
+
+        <div class="fila-dos">
+          <div class="campo-form">
+            <label for="fecha">Fecha de nacimiento</label>
+            <input type="date" id="fecha" name="fecha" autocomplete="bday">
+          </div>
+          <div class="campo-form">
+            <label for="genero">Género</label>
+            <select id="genero" name="genero">
+              <option value="" disabled selected>Seleccioná</option>
+              <option value="masculino">Masculino</option>
+              <option value="femenino">Femenino</option>
+              <option value="no_binario">No binario</option>
+              <option value="prefiero_no_decir">Prefiero no decir</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="divisor-form"></div>
+
+        <span class="sec-titulo"><i class="fa-solid fa-lock"></i>&nbsp; Tu cuenta</span>
+
+        <div class="campo-form">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" placeholder="Mínimo 8 caracteres" autocomplete="new-password">
+          <p class="error-msg" id="err-password">La contraseña debe tener al menos 8 caracteres</p>
+        </div>
+
+        <div class="campo-form">
+          <label for="password2">Repetir contraseña</label>
+          <input type="password" id="password2" name="password2" placeholder="Repetí tu contraseña" autocomplete="new-password">
+          <p class="error-msg" id="err-password2">Las contraseñas no coinciden</p>
+        </div>
+
+        <div class="divisor-form"></div>
+
+        <span class="sec-titulo"><i class="fa-solid fa-sliders"></i>&nbsp; Preferencias</span>
+
+        <div class="check-grupo">
+          <label class="check-item">
+            <input type="checkbox" id="chkPromo" name="promo" checked>
+            <span class="check-label">Quiero recibir promociones y descuentos exclusivos</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" id="chkNews" name="newsletter">
+            <span class="check-label">Suscribirme al newsletter de novedades</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" id="chkTyc" name="tyc">
+            <span class="check-label">
+              Acepto los <a href="#">términos y condiciones</a> y las <a href="#">políticas de privacidad</a>
+            </span>
+          </label>
+        </div>
+        <p class="error-msg" id="err-tyc" style="margin-top:8px;">Tenés que aceptar los términos para continuar</p>
+
+        <p class="texto-legal">
+          Al registrarte confirmás que tenés 16 años o más. Tu código del 10% llegará al email registrado una vez confirmada tu cuenta.
+        </p>
+
+        <button class="btn-registrar-form" onclick="registrar()">
+          <i class="fa-solid fa-arrow-right-to-bracket" style="margin-right:8px;"></i>CREAR CUENTA
+        </button>
+
+        <p class="link-login">¿Ya tenés cuenta? <a href="login.html">Iniciar sesión</a></p>
+
+      </div>
+    </div>
+
+    
+    <div class="exito-box" id="exitoBox">
+      <div class="exito-icono">✓</div>
+      <div class="exito-titulo" id="exito-titulo">¡BIENVENIDO/A!</div>
+      <p class="exito-texto">
+        Tu cuenta fue creada con éxito. Te enviamos el código de descuento al email registrado. ¡Usalo en tu primera orden!
+      </p>
+      <div class="cupon-box">BURGA10</div>
+      <p class="cupon-hint">10% de descuento en el total de tu compra!</p>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-newsletter">
+      <h2>Seguinos y disfrutá de nuestros beneficios.</h2>
+      <p>Suscribite a nuestro newsletter y recibí las últimas novedades, promociones y descuentos.</p>
+      <div class="newsletter-form">
+        <input type="email" id="contacto" placeholder="EJEMPLO@EMAIL.COM">
+        <button onclick="suscribirse()">SUBSCRIBIRME</button>
+      </div>
+    </div>
+
+    <div class="footer-nav">
+      <ul>
+        <li><a href="index.html" class="botnav">Inicio</a></li>
+        <li><a href="menu.html" class="botnav">Menu</a></li>
+        <li><a href="novedades.html" class="botnav">Novedades</a></li>
+        <li><a href="locales.html" class="botnav">Locales</a></li>
+        <li><a href="nosotros.html" class="botnav">Nosotros</a></li>
+        <li><a href="contacto.html" class="botnav">Contacto</a></li>
+        <li><a href="formulario.html" class="botnav">Registrate</a></li>  
+      </ul>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-left">
+        <h3>BURGA.</h3>
+        <p>© Todos los derechos reservados.</p>
+        <a href="#">Políticas de privacidad</a>
+      </div>
+      <div class="footer-right">
+        <span class="seguinos">Seguinos!</span>
+        <div class="socials">
+          <a href="https://www.instagram.com/burgaa.oficial" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#TikTok"><i class="fab fa-tiktok"></i></a>
+          <button class="btn-outline">CONTACTO</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
