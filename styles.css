@@ -838,6 +838,56 @@ body {
       padding: 100px 80px;
     }
 
+    .nosotros-actualizar {
+      background: #CF2539;
+      padding: 40px 50px;
+    }
+
+    .actualizar-header h2{
+      font-family: 'burga';
+      font-size: 50px;
+      color: #FAF4EB;
+      margin: 0;
+      text-align: left;
+    }
+
+    .actualizar-header p{
+      font-family: 'logotipo';
+      font-size: 15px;
+      color: #e8d9c4;
+
+    }
+
+    .seccion-actualizar{
+      display: flex;
+    }
+
+    .texto-actualizar{
+      flex: 1;
+    }
+
+    .redireccion-actualizar{
+      color: #FAF4EB;
+      cursor: pointer;
+    }
+
+    .texto-actualizar p{
+      font-family: 'logotipo';
+      font-size: 17px;
+      line-height: 1.85;
+    }
+
+    .foto-actualizar{
+      flex: 1;
+      text-align: right;
+      margin-right: 0px;
+    }
+
+    .foto-actualizar img{
+      width: 400px;
+      border-radius: 25px;
+    }
+
     .equipo-header {
       margin-bottom: 56px;
     }
@@ -1252,4 +1302,19 @@ body {
   transform: rotate(180deg);
 }
 
+.carrito-movil{
+  background-color: #5b9e3a;
+  display: flex;
+  align-items: center;
+  padding: 0.5px 10px;
+  border-radius: 5px;
+  gap: 10px;
+  color: #FAF4EB;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  font-family: 'logotipo';
+  cursor: pointer;
+}
 

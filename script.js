@@ -16,6 +16,7 @@ function agregarsmash(){
     contador.textContent = parseInt(contador.textContent) + 1;
     pagar.textContent = parseInt(pagar.textContent) + 14000;
     }
+    actualizarMovil()
 }
 
 function agregarclasica(){
@@ -27,9 +28,11 @@ function agregarclasica(){
         alert("El descuento ya no esta aplicado, porfavor ingresarlo devuelta");
     }
     else{
-    contador.textContent = parseInt(contador.textContent) + 1;
-    pagar.textContent = parseInt(pagar.textContent) + 10000;
+        contador.textContent = parseInt(contador.textContent) + 1;
+        pagar.textContent = parseInt(pagar.textContent) + 10000;
+    
     }
+    actualizarMovil()
 }
 
 function agregarurbano(){
@@ -44,6 +47,7 @@ function agregarurbano(){
         contador.textContent = parseInt(contador.textContent) + 1;
         pagar.textContent = parseInt(pagar.textContent) + 8500;
     }
+    actualizarMovil()
 }
 
 
@@ -60,12 +64,27 @@ function aplicardescuento(){
     else if (aplicado === true) {
         alert("Ya hay un descuento aplicado");
     }
+    actualizarMovil()
 }
 
 function finalizarcompra() {
+    console.log("domicilio checked:", domicilio.checked);
+
+    let callenumero = document.getElementById("calle-num").value;
+
     if (parseInt(pagar.textContent) === 0) {
         alert("¡Tu carrito está vacío! Agregá alguna burga primero.");
         return; 
+    }
+
+    if(parseInt(contador.textContent) === 0){
+        alert("¡Tu carrito está vacío! Agregá alguna burga primero.");
+        return; 
+    }
+
+    if (domicilio.checked && callenumero === "") {
+        alert("Por favor ingresá tu dirección de entrega.");
+        return;
     }
 
     let boton = $('.btn-finalizar');
@@ -80,6 +99,7 @@ function finalizarcompra() {
         $('#campos-direccion').fadeOut();
         $(domicilio).prop('checked', false); 
         aplicado = false;
+        actualizarMovil()
         // 5. Devolvemos el botón a su estado original
         boton.text("FINALIZAR COMPRA");
         boton.css('background-color', '#CF2539');
@@ -164,15 +184,24 @@ domicilio.addEventListener("change", function() {
         pagar.textContent = parseInt(pagar.textContent) - 1200;
         }
     }
+    actualizarMovil()
 });
 
 $(document).ready(function() {
   $('.secdesplegable .fa-arrow-down').click(function() {
-    $('.carritosection').fadeToggle(300); // 300 son los milisegundos que dura la animación
+    $('.carritosection').fadeToggle(300);
     $(this).toggleClass('rotate-arrow');
     
   });
 
 });
 
+function actualizarMovil() {
+  document.getElementById("contador-movil").textContent = contador.textContent;
+  document.getElementById("total-movil").textContent = pagar.textContent + " $";
+}
 
+function mostrarcarrito(){
+    location.href = '#carrito';
+    $('.carritosection').fadeIn(1000);
+}

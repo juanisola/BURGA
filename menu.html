@@ -34,7 +34,7 @@
     <img src="img/menu.png" alt="Banner Menu">
   </div>
 
-     <section class="carrito">
+     <section class="carrito" id="carrito">
       <div class="secdesplegable">
         <h1 class="titulodesplegable">
           CARRITO DE COMPRAS
@@ -67,7 +67,7 @@
             </div>
             <div id="campos-direccion" style="display: none; margin-top: 15px;">
               <label style="display: block; margin-bottom: 5px;">Dirección de entrega:</label>
-              <input type="text" placeholder="Calle y número" class="input-descuento" style="width: 100%; max-width: 300px; margin-bottom: 10px;">
+              <input type="text" placeholder="Calle y número" class="input-descuento" style="width: 100%; max-width: 300px; margin-bottom: 10px;" id="calle-num">
               <br>
               <input type="text" placeholder="Depto / Piso / Timbre (Opcional)" class="input-descuento" style="width: 100%; max-width: 300px;">
             </div>
@@ -300,7 +300,6 @@
     <div class="newsletter-form">
       <input type="email" id="contacto" placeholder="EJEMPLO@EMAIL.COM">
       <button onclick="suscribirse()">SUBSCRIBIRME</button>
-      <script src="script.js"></script>
     </div>
   </div>
 
@@ -338,5 +337,11 @@
   </div>
 
 </footer>
+
+<div class="carrito-movil" onclick="mostrarcarrito()">
+  <i class="fa-solid fa-cart-arrow-down"></i>
+  <p id="contador-movil">0</p> <p>-</p> <p id="total-movil">0 $</p>
+</div>
+
 </body>
 </html>
