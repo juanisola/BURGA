@@ -101,10 +101,9 @@ header {
 }
 
 .logoarriba img {
-    width: 120px;
+    width: 170px;
     height: auto;
     position: relative;
-    top: 30px;
     filter: drop-shadow(0 4px 8px rgba(0,0,0,0.25));
 }
 
