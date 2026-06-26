@@ -1,3 +1,4 @@
+
 let contador = document.getElementById("contador");
 let pagar = document.getElementById("totalpagar");
 let descuento = document.getElementById("descuento");
@@ -74,7 +75,7 @@ function finalizarcompra() {
 
     if (parseInt(pagar.textContent) === 0) {
         alert("¡Tu carrito está vacío! Agregá alguna burga primero.");
-        return; 
+        return;
     }
 
     if(parseInt(contador.textContent) === 0){
@@ -90,6 +91,97 @@ function finalizarcompra() {
     let boton = $('.btn-finalizar');
     boton.text("PROCESANDO PEDIDO...");
     boton.css('background-color', '#a0a0a0');
+
+
+// ─── ENVÍO / DOMICILIO ────────────────────────────────────────────────────────
+if (domicilio) {
+    domicilio.addEventListener("change", function () {
+        if (domicilio.checked) {
+            $('#campos-direccion').fadeIn(200);
+            if (aplicado === true) {
+                pagar.textContent = parseInt(pagar.textContent) / 0.9;
+                pagar.textContent = parseInt(pagar.textContent) + 1200;
+                aplicado = false;
+                alert("El descuento ya no está aplicado. Por favor, ingresalo de nuevo.");
+            } else {
+                pagar.textContent = parseInt(pagar.textContent) + 1200;
+            }
+        } else {
+            $('#campos-direccion').fadeOut(200);
+            if (aplicado === true) {
+                pagar.textContent = parseInt(pagar.textContent) / 0.9;
+                pagar.textContent = parseInt(pagar.textContent) - 1200;
+                aplicado = false;
+                alert("El descuento ya no está aplicado. Por favor, ingresalo de nuevo.");
+            } else {
+                pagar.textContent = parseInt(pagar.textContent) - 1200;
+            }
+        }
+    });
+}
+
+// ─── CARRITO DESPLEGABLE (solo menu.html, donde jQuery está cargado) ──────────
+if (typeof $ !== 'undefined') {
+    $(document).ready(function () {
+        $('.secdesplegable .fa-arrow-down').click(function () {
+            $('.carritosection').fadeToggle(300);
+            $(this).toggleClass('rotate-arrow');
+        });
+    });
+}
+
+// ─── REGISTRO (formulario.html) ───────────────────────────────────────────────
+function registrar() {
+    let valido = true;
+
+    function validarCampo(idCampo, idError, fnTest) {
+        const campo = document.getElementById(idCampo);
+        const error = document.getElementById(idError);
+        if (!campo || !error) return;
+        const ok = fnTest(campo.value);
+        campo.classList.toggle('campo-error', !ok);
+        error.style.display = ok ? 'none' : 'block';
+        if (!ok) valido = false;
+    }
+
+    validarCampo('nombre',   'err-nombre',   v => v.trim().length > 0);
+    validarCampo('apellido', 'err-apellido', v => v.trim().length > 0);
+    validarCampo('email',    'err-email',    v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v));
+    validarCampo('password', 'err-password', v => v.length >= 8);
+
+    // Validar que las contraseñas coincidan
+    const pass1    = document.getElementById('password');
+    const pass2    = document.getElementById('password2');
+    const errPass2 = document.getElementById('err-password2');
+    if (pass1 && pass2 && errPass2) {
+        const coinciden = pass1.value === pass2.value && pass2.value.length > 0;
+        pass2.classList.toggle('campo-error', !coinciden);
+        errPass2.style.display = coinciden ? 'none' : 'block';
+        if (!coinciden) valido = false;
+    }
+
+    // Validar términos y condiciones
+    const tyc    = document.getElementById('chkTyc');
+    const errTyc = document.getElementById('err-tyc');
+    if (tyc && errTyc) {
+        errTyc.style.display = tyc.checked ? 'none' : 'block';
+        if (!tyc.checked) valido = false;
+    }
+
+    if (valido) {
+        // Saludo personalizado con el nombre ingresado
+        const nombre      = document.getElementById('nombre').value.trim();
+        const exitoTitulo = document.getElementById('exito-titulo');
+        if (exitoTitulo) {
+            exitoTitulo.textContent = '¡BIENVENIDO/A, ' + nombre.toUpperCase() + '!';
+        }
+
+        document.getElementById('formContenedor').style.display = 'none';
+        document.getElementById('exitoBox').style.display       = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+}
+
     setTimeout(function() {
         
         alert("¡Muchas gracias por tu compra en BURGA! Tu pedido ya se está cocinando. Total: $" + pagar.textContent);
@@ -214,6 +306,7 @@ function actualizarMovil() {
   document.getElementById("contador-movil").textContent = contador.textContent;
   document.getElementById("total-movil").textContent = pagar.textContent + " $";
 }
+
 
 function mostrarcarrito(){
     location.href = '#carrito';
